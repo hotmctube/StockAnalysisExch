@@ -1,7 +1,7 @@
 '''
 Created on 13 Feb 2020
 
-@author: Manoj Chhatralia
+@author: manojc
 '''
 import stockdata as sd
 from pytickersymbols import PyTickerSymbols
