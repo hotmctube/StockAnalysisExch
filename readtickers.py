@@ -1,7 +1,7 @@
 '''
 Created on 12 Feb 2020
 
-@author: Manoj Chhatralia
+@author: manojc
 '''
 
 #import requests
