@@ -220,7 +220,6 @@ class StockData(Data):
             if len(key) > 0:
                 self.data[f'WT_{key}'] = weights
         
-     
             if key in listTotalWeightCols:
                 if firstKey == True:
                     self.data['WT_Total'] = self.data[f'WT_{key}']
@@ -232,7 +231,6 @@ class StockData(Data):
             if sortColumn in self.data:
                 self.data = self.data.sort_values(by=sortColumn,ascending=False)
         else:
-            
             if 'WT_Total' in self.data.columns:
                 self.data = self.data.sort_values(by='WT_Total',ascending=False)
             else:
