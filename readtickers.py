@@ -109,43 +109,43 @@ class TickerData:
             tickers = [ [ "REN.AS", ticker[1] ] if ticker[0] == "REL.AS" else ticker for ticker in tickers ]
         
         elif index == 'BEL 20':  
-            #Modify tickers to Add ".AS" for AS Stocks
+            #Modify tickers to Add ".BR" for BR Stocks
             tickers = [ [ ticker[0] + ".BR", ticker[1] ] if ticker[0][:-3] != ".BR" else ticker for ticker in tickers  ]
             tickers = [ [ "APAM", ticker[1] ] if ticker[0] == "APAM.BR" else ticker for ticker in tickers ]
 
         elif index == 'CAC 40':  
-            #Modify tickers to Add ".AS" for AS Stocks
+            #Modify tickers to Add ".PA" for PA Stocks
             tickers = [ [ ticker[0] + ".PA", ticker[1] ] if ticker[0][:-3] != ".PA" else ticker for ticker in tickers  ]
             tickers = [ [ "1BR1.F", ticker[1] ] if ticker[0] == "URW.PA" else ticker for ticker in tickers ]
 
         elif index == 'IBEX 35':  
-            #Modify tickers to Add ".AS" for AS Stocks
+            #Modify tickers to Add ".MC" for MC Stocks
             tickers = [ [ ticker[0] + ".MC", ticker[1] ] if ticker[0][:-3] != ".MC" else ticker for ticker in tickers  ]
             tickers = [ [ "MTS.MC", ticker[1] ] if ticker[0] == "MT.MC" else ticker for ticker in tickers ]
        
         elif index == 'MDAX':  
-            #Modify tickers to Add ".AS" for AS Stocks
+            #Modify tickers to Add ".DE" for DE Stocks
             tickers = [ [ ticker[0] + ".DE", ticker[1] ] if ticker[0][:-3] != ".DE" else ticker for ticker in tickers  ]
         
         elif index == 'OMX Helsinki 25':  
-            #Modify tickers to Add ".AS" for AS Stocks
+            #Modify tickers to Add ".HE" for HE Stocks
             tickers = [ [ ticker[0] + ".HE", ticker[1] ] if ticker[0][:-3] != ".HE" else ticker for ticker in tickers  ]
             tickers = [ [ "NRE1.VI", ticker[1] ] if ticker[0] == "NRE1V.HE" else ticker for ticker in tickers ]
         
         elif index == 'OMX Stockholm 30':  
-            #Modify tickers to Add ".AS" for AS Stocks
+            #Modify tickers to Add ".ST" for ST Stocks
             tickers = [ [ ticker[0] + ".ST", ticker[1] ] if ticker[0][:-3] != ".ST" else ticker for ticker in tickers  ]
             tickers = [ [ "TELIA1.HE", ticker[1] ] if ticker[0] == "TLS1V.ST" else ticker for ticker in tickers ]
             tickers = [ [ "NDA-FI.HE", ticker[1] ] if ticker[0] == "NDA-FI.ST" else ticker for ticker in tickers ]
             tickers = [ [ "ESSITY-B.ST", ticker[1] ] if ticker[0] == "ESSITY+B.ST" else ticker for ticker in tickers ]
         
         elif index == 'SDAX':  
-            #Modify tickers to Add ".AS" for AS Stocks
+            #Modify tickers to Add ".DE" for SDAX Stocks
             tickers = [ [ ticker[0] + ".DE", ticker[1] ] if ticker[0][:-3] != ".DE" else ticker for ticker in tickers  ]
             tickers = [ ticker for ticker in tickers if ticker[0] != "O1BC.DE" ]
         
         elif index == 'TECDAX':  
-            #Modify tickers to Add ".AS" for AS Stocks
+            #Modify tickers to Add ".DE" for TECDAX Stocks
             tickers = [ [ ticker[0] + ".DE", ticker[1] ] if ticker[0][:-3] != ".DE" else ticker for ticker in tickers  ]
             tickers = [ ticker for ticker in tickers if ticker[0] != "O1BC.DE" ]            
         
