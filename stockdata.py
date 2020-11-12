@@ -30,7 +30,7 @@ class Data(ABC):
 
 class StockData(Data):
     '''
-    This class holds stock information that we want to capture and pass distribute for manipulation
+    This class holds stock information that we want to capture, pass and distribute for manipulation
     '''
     def __init__(self, outputDir):
         '''
