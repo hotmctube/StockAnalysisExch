@@ -12,7 +12,6 @@ from datetime import datetime
 from pytickersymbols import PyTickerSymbols
 from astropy.table import index
 
-
 # Headers to fake a user agent
 _headers = {
     'User-Agent': 'Mozilla/5.0 (X11; U; Linux i686) Gecko/20071127 Firefox/2.0.0.11'
@@ -71,7 +70,6 @@ class TickerData:
         print(ticker_industries)        
         self.__read_tickers_from_list(index, ticker_industries)
         
-
     def __cleanup_indices(self, index, tickers):
         if index == 'FTSE 100':
             tickers = [ [ ticker[0][:-1], ticker[1] ] if ticker[0][-1:] == "." else ticker for ticker in tickers ]
@@ -114,7 +112,6 @@ class TickerData:
             #Modify tickers to Add ".AS" for AS Stocks
             tickers = [ [ ticker[0] + ".BR", ticker[1] ] if ticker[0][:-3] != ".BR" else ticker for ticker in tickers  ]
             tickers = [ [ "APAM", ticker[1] ] if ticker[0] == "APAM.BR" else ticker for ticker in tickers ]
-
 
         elif index == 'CAC 40':  
             #Modify tickers to Add ".AS" for AS Stocks
@@ -176,7 +173,6 @@ class TickerData:
             if tickerData != None:
                 self.myData.append(tickerData)
     
-    
     def __convert_datetime_stamp(self, dictItems, field):
         if field in dictItems.keys():
             dictItems[field] = datetime.fromtimestamp(dictItems[field]).strftime("%Y-%m-%d %I:%M:%S")
@@ -204,7 +200,6 @@ class TickerData:
             print(f'No quote found for SYMBOL:{ticker}')
             return None
             
-        
         for field in ['regularMarketTime',
                       'preMarketTime',
                       'dividendDate',
@@ -213,7 +208,7 @@ class TickerData:
                       'earningsTimestampEnd' ]:
             self.__convert_datetime_stamp(data_json, field)
         
-        #Add Indusstry as one column only for now    
+        #Add Industry as one column only for now    
         if type(ticker[1]) == list:
             data_json['industry'] = ticker[1]
             
