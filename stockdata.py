@@ -50,7 +50,6 @@ class StockData(Data):
     def load_tickers_from_file(self, customFile, label):
         self.tickerData.from_filename(customFile, label)
         
-        
     def load_tickers_from_exch_list(self, exchanges): 
         if len(exchanges) != 0:
             if ("ALL" in exchanges):
@@ -239,13 +238,11 @@ class StockData(Data):
             else:
                 print(f'Could not find {sortColumn}')
               
-
     def gen_report(self, prefix):
         strFilename = f'{prefix}_{self.fileSuffix}'
         self.rearrange_df_cols()
         self.__output(strFilename)
-        
-    
+          
     def generate_report(self, prefix, sortField, ascending, lastReport):    
         if len(sortField) > 0 and sortField in self.data.columns:
             self.data = self.data.sort_values(by=sortField,ascending=ascending)
@@ -256,10 +253,8 @@ class StockData(Data):
         for i in range(len(self.data)):
             iWeight.append((df_len-i)/df_len)
             
-        
         if len(sortField) > 0:
             self.data[f'WT_{sortField}'] = iWeight
-        
         
         if lastReport == True:
             self.data['WT_Total'] = self.data['WT_trailingAnnualDividendRate'] * \
