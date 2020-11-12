@@ -8,7 +8,7 @@ from pytickersymbols import PyTickerSymbols
 
 #Define Output Directory Path for output
 outputDir = '/Users/manojc/Projects/StockAnalysis2'
-#Define Location og custom tickers to be included in the output
+#Define Location of custom tickers to be included in the output
 customFile = '/Users/manojc/eclipse-workspace/StockAnalysisExch/tickers.txt'
 #Define Exchanges from which to pull trade tickers
 exchanges = [ 'AEX', 'BEL 20', 'CAC 40', 'DAX', 'DOW JONES', 'FTSE 100', 'IBEX 35', 'MDAX', 'NASDAQ 100', 'OMX Helsinki 25', 'S&P 100', 'S&P 500', 'SDAX', 'SMI', 'TECDAX' ]
